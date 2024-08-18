@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* FONTS */
+  --rtc-primary-font: 'Work Sans', sans-serif;
+
+  /* BRANDING COLORS */
+  --rtc-color-1: #ffffff;
+  --rtc-color-2: #2947a9;
+  --rtc-color-3: #292e3d;
+  --rtc-color-4: #f9995d;
+  --rtc-color-5: #c2c7d6;
+  --rtc-color-6: #f6f8f7;
+
+  /* BACKGROUND-COLORS */
+  --rtc-primary-bg: var(--rtc-color-1);
+  --rtc-secondary-bg: var(--rtc-color-2);
+  --rtc-tertiary-bg: var(--rtc-color-6);
+  --rtc-special-bg: var(--rtc-color-3);
+
+  /* TEXT-COLORS */
+  --rtc-primary-text: var(--rtc-color-3);
+  --rtc-secondary-text: var(--rtc-color-1);
+  --rtc-tertiary-text: var(--rtc-color-5);
+  --rtc-special-text: var(--rtc-color-4);
+  --rtc-special-v2-text: var(--rtc-color-2);
+
+  /* BORDER-COLORS */
+  --rtc-primary-border: 2px solid var(--rtc-color-5);
+  --rtc-secondary-border: 2px solid var(--rtc-color-1);
+  --rtc-tertiary-border: 2px solid var(--rtc-color-2);
+
+  /* BORDER RADIUS */
+  --rtc-primary-br: 4px;
+  --rtc-secondary-br: 2px;
+
+  /* SPACINGS */
+  --rtc-margin-xs: 10px;
+  --rtc-margin-s: 20px;
+  --rtc-margin-m: 30px;
+  --rtc-margin-l: 40px;
+  --rtc-margin-xl: 50px;
+  --rtc-margin-section: 100px;
+
+  --rtc-padding-xs: 10px;
+  --rtc-padding-s: 20px;
+  --rtc-padding-m: 30px;
+  --rtc-padding-l: 40px;
+  --rtc-padding-xl: 50px;
+
+  --rtc-gap-xs: 10px;
+  --rtc-gap-s: 20px;
+  --rtc-gap-m: 30px;
+  --rtc-gap-l: 40px;
+  --rtc-gap-xl: 50px;
+}
+* {
+  margin: 0%;
+  box-sizing: border-box;
+  padding: 0%;
+  font-family: var(--rtc-primary-font);
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p,
+label,
+button,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--rtc-primary-text);
+}
+
+h1 {
+  color: var(--rtc-special-v2-text);
+}
+.flex-conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--rtc-gap-s);
+}
+.column {
+  flex-direction: column;
+}
+.button-main {
+  font-weight: 600;
+  padding: var(--rtc-margin-xs) var(--rtc-padding-m);
+  border-radius: var(--rtc-primary-br);
+  border: none;
+}
+
+#header {
+  padding: var(--rtc-padding-s);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 12svh;
+  justify-content: space-around;
+  background-color: var(--rtc-primary-bg);
+  z-index: 999999999999999;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--rtc-primary-bg);
+}
+/* #header > nav > ul {
+  display: flex;
+  gap: var(--rtc-gap-l);
+} */
+#header > a {
+  font-weight: 500;
+}
+.special {
+  color: var(--rtc-special-text);
+}
+#hero {
+  padding-top: 150px;
+  background-image: url(https://media.istockphoto.com/id/1045012300/es/foto/bandera-al-aire-libre-vertical-en-blanco-en-pared-de-edificio-moderno-luminoso-render-3d.jpg?s=170667a&w=0&k=20&c=FB-IY-4YH5_RkCk8THBbUT8ElHbHQD5YkRof-BGrek0=);
+  min-height: 80svh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  justify-content: start;
+}
+
+#hero > h2 {
+  width: 50%;
+  font-size: 60px;
+  padding: var(--rtc-padding-m);
+  color: white;
+}
+#hero > article {
+  background-color: var(--rtc-secondary-bg);
+  border-radius: var(--rtc-primary-br);
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  max-width: 550px;
+  min-width: 380px;
+}
+#hero > article > h3,
+#hero > article > p {
+  color: var(--rtc-secondary-text);
+}
+#hero > article > h3 {
+  padding-top: var(--rtc-padding-m);
+}
+#hero > article > p {
+  font-size: 25px;
+  width: 80%;
+  text-align: center;
+}
+#hero > article button {
+  background-color: var(--rtc-special-bg);
+  width: 50%;
+  border: none;
+  padding: var(--rtc-padding-xs);
+  justify-content: center;
+  cursor: pointer;
+}
+
+#hero > article button > p {
+  color: var(--rtc-secondary-text);
+}
+#hero > article div {
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+#hero > article button:first-of-type {
+  border-right: var(--rtc-secondary-border);
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
+}
+
+#about > {
+  position: relative;
+  max-width: 1400px;
+}
+
+#about {
+  margin-top: var(--rtc-margin-section);
+  min-height: 60svh;
+}
+
+#about > div {
+  position: relative;
+  max-width: 1400px;
+}
+
+#about > div > article {
+  background-color: var(--rtc-secondary-bg);
+  width: 350px;
+  border-radius: var(--rtc-primary-br);
+  padding: var(--rtc-padding-l) var(--rtc-padding-m);
+  align-items: flex-start;
+  position: absolute;
+  bottom: 20%;
+  right: -100px;
+}
+
+#about > div > article > h3,
+#about > div > article > p {
+  color: var(--rtc-secondary-text);
+}
+
+#about > div > article > h3 {
+  font-size: 30px;
+}
+
+#about > div > article > button {
+  background-color: var(--rtc-primary-bg);
+  color: var(--rtc-special-v2-text);
+  padding: var(--rtc-padding-xs) var(--rtc-padding-m);
+}
+
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  margin-top: var(--rtc-margin-section);
+  gap: var(--rtc-gap-xl);
+  background-color: var(--rtc-tertiary-bg);
+  min-height: 50svh;
+  justify-content: center;
+  align-items: center;
+  padding: var(--rtc-padding-xl) var(--rtc-padding-m);
+}
+
+#services > div {
+  padding: var(--rtc-padding-m) var(--rtc-padding-xl);
+  border-radius: var(--rtc-primary-br);
+  height: 200px;
+}
+
+#services > div:nth-child(odd) {
+  background-color: var(--rtc-primary-bg);
+}
+
+#services > div:nth-child(odd) > img {
+  padding-bottom: var(--rtc-padding-m);
+  border-bottom: 3px solid var(--rtc-color-2);
+}
+
+#services > div:nth-child(even) {
+  background-color: var(--rtc-secondary-bg);
+}
+
+#services > div:nth-child(even) > img {
+  padding-bottom: var(--rtc-padding-m);
+  border-bottom: 3px solid var(--rtc-color-1);
+}
+
+#services > div:nth-child(even) > h4 {
+  color: var(--rtc-secondary-text);
+}
+
+#experience {
+  gap: 0;
+  margin-top: var(--rtc-margin-section);
+  justify-content: space-evenly;
+}
+.achievements {
+  width: 550px;
+}
+.achievements > ul > li {
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.48);
+  border-radius: var(--rtc-primary-br);
+  padding: var(--rtc-padding-xs);
+  position: relative;
+  width: auto;
+  background-color: var(--rtc-primary-bg);
+}
+.achievements > ul > li > img {
+  position: absolute;
+}
+.achievements > ul > li:nth-child(1) > img {
+  top: -50px;
+  right: -30px;
+}
+.achievements > ul > li:nth-child(2) > img {
+  top: -50px;
+  left: -35px;
+}
+.achievements > ul > li:nth-child(3) > img {
+  top: -15px;
+  right: -25px;
+}
+.achievements > ul > li:nth-child(4) > img {
+  bottom: -40px;
+  right: -40px;
+}
+.info {
+  width: 30%;
+  min-width: 300px;
+  gap: var(--rtc-gap-l);
+  align-items: start;
+  max-width: 450px;
+}
+.info > h2 {
+  font-size: 50px;
+  color: var(--rtc-special-v2-text);
+}
+.info > button {
+  color: var(--rtc-secondary-text);
+  background-color: var(--rtc-secondary-bg);
+}
+.achievements > ul > li > p {
+  font-size: 60px;
+  font-weight: 700;
+}
+.achievements > ul > li > h4 {
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--rtc-color-5);
+}
+.achievements > ul > li > h4 {
+  border-left: 8px solid var(--rtc-color-4);
+  padding-left: var(--rtc-padding-s);
+}
+.achievements-list {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: start;
+  gap: 10px;
+  padding: var(--rtc-padding-l);
+}
+
+.achievements > ul > li:nth-child(odd) {
+  z-index: 20;
+}
+
+.achievements > ul > li:nth-child(1) {
+  top: 50px;
+  left: 200px;
+}
+.achievements > ul > li:nth-child(3) {
+  top: -15px;
+  left: 150px;
+}
+.achievements > ul > li:nth-child(4) {
+  bottom: 80px;
+  left: 20px;
+}
+@media (max-width: 1200px) {
+  #about > div > img {
+    display: none;
+  }
+  #about {
+    background-image: url(./assets/foto-grande.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #about > div {
+    width: 100%;
+    height: 60svh;
+  }
+  #about > div > article {
+    bottom: -100px;
+    right: 0;
+  }
+}
+@media (max-width: 670px) {
+  #header {
+    height: 30svh;
+  }
+}
+@media (max-width: 830px) {
+  #hero > h2 {
+    width: 80%;
+    margin: var(--rtc-margin-xl);
+  }
+}
+@media (max-width: 560px) {
+  #hero > h2 {
+    font-size: 40px;
+    padding-bottom: 80px;
+  }
+  #hero > article > p {
+    font-size: 20px;
+  }
+  #hero > article {
+    min-width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .achievements {
+    width: 400x;
+  }
+
+  .achievements > ul > li {
+    padding: var(--rtc-padding-s);
+  }
+  .achievements > ul > li > img {
+    width: 50px;
+  }
+
+  .achievements > ul > li:nth-child(1) > img {
+    top: -30px;
+    left: 120px;
+  }
+  .achievements > ul > li:nth-child(2) > img {
+    top: -20px;
+    left: -20px;
+  }
+  .achievements > ul > li:nth-child(3) > img {
+    top: -25px;
+    right: -25px;
+  }
+  .achievements > ul > li:nth-child(4) > img {
+    bottom: -20px;
+    right: -30px;
+  }
+  .achievements > ul > li > p {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .achievements > ul > li > h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--rtc-color-5);
+  }
+  .achievements > ul > li:nth-child(1) {
+    top: 50px;
+    left: 150px;
+  }
+  .achievements > ul > li:nth-child(3) {
+    bottom: 10px;
+    left: 100px;
+  }
+  .achievements > ul > li:nth-child(4) {
+    bottom: 40px;
+    left: 10px;
+  }
+}
